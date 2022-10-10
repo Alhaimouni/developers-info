@@ -1,14 +1,14 @@
 import { useReducer } from 'react';
-import { Developer, addAction } from './components/Developer';
+import { Developer } from './components/Developer';
 import './App.css';
 import DeveloperForm from './components/DeveloperForm';
 import DeveloperList from './components/DeveloperList';
 
 function App() {
-  const [users, dipatch] = useReducer(Developer, [{ name: 'ahmad', id: 1 }, { name: 'ahmad', id: 2 }, { name: 'ahmad', id: 3 }]);
+  const [users, dipatch] = useReducer(Developer, []);
   return (
     <div className="App">
-      <DeveloperForm />
+      <DeveloperForm dispatch={dipatch} />
       <DeveloperList users={users} dispatch={dipatch} />
     </div>
   );

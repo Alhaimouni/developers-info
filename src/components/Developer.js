@@ -9,6 +9,10 @@ function Developer(state = initialState, action) {
       const newDev = {
         id: payload.id,
         name: payload.name,
+        food: payload.food,
+          drink: payload.drink,
+          language: payload.language,
+          tech: payload.tech,
       }
       const newState = [...state, newDev];
       return newState;
