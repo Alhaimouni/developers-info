@@ -1,5 +1,6 @@
 import React from 'react'
 import { addAction } from '../components/Developer';
+import '../App.css';
 
 
 
@@ -23,11 +24,13 @@ function DeveloperForm({ dispatch }) {
         <legend>Add a Developer</legend>
         <input type='text' placeholder='User Name' name='name' required style={{ margin: '5px 1px' }} />
         <select name="language">
+          <option value='not selected'>Select Language...</option>
           <option value="java script">java script</option>
           <option value="java">java</option>
           <option value="C++">C++</option>
         </select>
         <select name="tech">
+          <option value='not selected'>Select Technology...</option>
           <option value="React">React</option>
           <option value="Angular">Angular</option>
           <option value="Vue">Vue</option>

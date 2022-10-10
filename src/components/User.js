@@ -1,5 +1,7 @@
 import React from 'react'
 import { removeAction } from './Developer';
+import '../App.css'
+
 function User({ user, dispatch }) {
   return (
     <div onClick={() => { dispatch(removeAction(user.id)) }}>
