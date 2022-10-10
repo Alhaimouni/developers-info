@@ -1,18 +1,11 @@
 import React from 'react';
 import { removeAction } from './Developer';
+import User from './User';
 
 function DeveloperList({ users, dispatch }) {
-
-
   return (
     <div>
-      <ul>
-        {(users.length) ? users.map((user, index) => <li
-          key={index}
-          onClick={() => {
-            dispatch(removeAction(user.id))
-          }}>{user.name}</li>) : <p>No users</p>}
-      </ul>
+        {(users.length) ? users.map((user, index) => <User key={index} user={user} dispatch={dispatch} />) : <p>No users</p>}
     </div>
   )
 }
